@@ -17,7 +17,7 @@ import NoFavouritesButton from "../../components/NoFavouritesButton";
 async function fetchRandomMeal(mealType, category, area) {
   if (category && area) {
     const response = await fetch(
-      `https://chews-backend.herokuapp.com/area-category?category=${category}&area=${area}`
+      `https://chews-app-backend-production.up.railway.app/area-category?category=${category}&area=${area}`
     );
     const data = await response.json();
     if (data.payload.length === 0) {
@@ -29,7 +29,7 @@ async function fetchRandomMeal(mealType, category, area) {
 
   if (category) {
     const response = await fetch(
-      `https://chews-backend.herokuapp.com/area-category?category=${category}`
+      `https://chews-app-backend-production.up.railway.app/area-category?category=${category}`
     );
     const data = await response.json();
     if (data.payload.length === 0) {
@@ -41,7 +41,7 @@ async function fetchRandomMeal(mealType, category, area) {
 
   if (area) {
     const response = await fetch(
-      `https://chews-backend.herokuapp.com/area-category?area=${area}`
+      `https://chews-app-backend-production.up.railway.app/area-category?area=${area}`
     );
     const data = await response.json();
     if (data.payload.length === 0) {
@@ -52,7 +52,7 @@ async function fetchRandomMeal(mealType, category, area) {
   } else {
     if (mealType === "main dish") {
       const response = await fetch(
-        `https://chews-backend.herokuapp.com/random-meal?meal=main`
+        `https://chews-app-backend-production.up.railway.app/random-meal?meal=main`
       );
 
       const data = await response.json();
@@ -63,7 +63,7 @@ async function fetchRandomMeal(mealType, category, area) {
       }
     }
     const response = await fetch(
-      `https://chews-backend.herokuapp.com/random-meal?meal=${mealType}`
+      `https://chews-app-backend-production.up.railway.app/random-meal?meal=${mealType}`
     );
 
     const data = await response.json();

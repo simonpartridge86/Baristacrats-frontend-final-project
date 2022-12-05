@@ -17,13 +17,13 @@ import NoFavouritesButton from "../../components/NoFavouritesButton";
 async function fetchMealByIngredients(meal, ingredients) {
   if (meal === "main dish") {
     const response = await fetch(
-      `https://chews-backend.herokuapp.com/ingredients-category?category=main&ingredients=${ingredients}`
+      `https://chews-app-backend-production.up.railway.app/ingredients-category?category=main&ingredients=${ingredients}`
     );
     const data = await response.json();
     return data.payload[0];
   } else {
     const response = await fetch(
-      `https://chews-backend.herokuapp.com/ingredients-category?category=${meal}&ingredients=${ingredients}`
+      `https://chews-app-backend-production.up.railway.app/ingredients-category?category=${meal}&ingredients=${ingredients}`
     );
     const data = await response.json();
     return data.payload[0];
